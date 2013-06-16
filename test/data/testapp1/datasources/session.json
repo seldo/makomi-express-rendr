@@ -1,5 +1,5 @@
 {
-  "handler": "makomi-datasource-sessions-memcache",
+  "source": "makomi-datasource-sessions-memcache",
   "params": {
     "host": "localhost",
     "port": 11211,
