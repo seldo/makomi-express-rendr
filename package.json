@@ -1,0 +1,11 @@
+{
+  "name": "makomi-express-rendr",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+  },
+  "dependencies": {
+    "tape": "*",
+    "express-mock-request": "*"
+  }
+}
