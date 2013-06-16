@@ -1,0 +1,8 @@
+{
+  "name": "test-app-1",
+  "generators": {
+    "router": "makomi-express-rendr",
+    "controllers": "makomi-express-rendr",
+    "views": "makomi-express-rendr"
+  }
+}

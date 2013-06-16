@@ -1,0 +1,64 @@
+{
+  "name": "index",
+  "actions": [
+    {
+      "name": "index",
+      "description": "Front page",
+      "models": {
+        "session_data": {
+          "model": "session_data"
+        },
+        "current_user": {
+          "model": "user/single",
+          "requires": ["session_data"],
+          "bindings": {
+            "id": {
+              "type": "dataref",
+              "source": "session_data.user_id"
+            }
+          }
+        },
+        "recent_statuses": {
+          "model": "status/list",
+          "bindings": {
+            "limit": 20
+          }
+        },
+        "recent_news": {
+          "model": "recent_news"
+        }
+      },
+      "layout": {
+        "source": "layouts/default",
+        "context": {
+          "title": "Generated Hello, World app"
+        },
+        "templates": {
+          "col1": {
+            "source": "index/nav",
+            "context": {
+              "page": "front"
+            }
+          },
+          "col2": {
+            "source": "index/index",
+            "context": {}
+          },
+          "col3": {
+            "source": "status/newsfeed",
+            "context": {
+              "current_user_id": {
+                "type": "value",
+                "source": "current_user.user_id"
+              },
+              "recent_statuses": {
+                "type": "model",
+                "source": "recent_statuses"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
