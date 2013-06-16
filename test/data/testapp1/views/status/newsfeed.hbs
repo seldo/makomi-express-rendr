@@ -1,0 +1,15 @@
+<ul>
+  {{#each recent_statuses}}
+  <li>
+    <h3>{{this.title}}</h3>
+    <p>{{this.description}}</p>
+  </li>
+  {{else}}
+  <p class="empty">No news is, in this case, bad news.</p>
+  {{/each}}
+</ul>
+<!-- getting waaaaay ahead of ourselves now -->
+<form name="createstatus">
+  <textarea name="status">What's up, yo?</textarea>
+  <input type="submit" value="Update status">
+</form>

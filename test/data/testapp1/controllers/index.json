@@ -34,17 +34,34 @@
           "title": "Generated Hello, World app"
         },
         "templates": {
+          "userprofile": {
+            "source": "user/info",
+            "context": {
+              "user": {
+                "type": "model",
+                "source": "current_user"
+              }
+            }
+          },
           "col1": {
-            "source": "index/nav",
+            "source": "nav",
             "context": {
               "page": "front"
+            },
+            "templates": {
+              "news-box": {
+                "comment": "do we allow sub-templates?",
+                "source": "recent_news",
+                "context": {
+                  "recent_news": {
+                    "type": "model",
+                    "source": "recent_news"
+                  }
+                }
+              }
             }
           },
           "col2": {
-            "source": "index/index",
-            "context": {}
-          },
-          "col3": {
             "source": "status/newsfeed",
             "context": {
               "current_user_id": {
@@ -56,6 +73,10 @@
                 "source": "recent_statuses"
               }
             }
+          },
+          "col3": {
+            "source": "welcome",
+            "context": {}
           }
         }
       }
