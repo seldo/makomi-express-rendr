@@ -1,11 +1,4 @@
 <ul>
-  {{#each recent_news}}
-  <li>
-    <h3>{{this.title}}</h3>
-    <p>{{this.description}}</p>
-  </li>
-  {{else}}
-  <p class="empty">No news is, in this case, bad news.</p>
-  {{/each}}
+  <include src="more_news"></include>
 </ul>
 <p><a href="?" id="link-recent-news-more">Get more stories</a></p>

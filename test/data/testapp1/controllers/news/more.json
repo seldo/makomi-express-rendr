@@ -1,0 +1,11 @@
+{
+  "description": "Newsfeed partial",
+  "models": {
+    "recent_news": {
+      "model": "recent_news"
+    }
+  },
+  "layout": {
+    "source": "more_news"
+  }
+}

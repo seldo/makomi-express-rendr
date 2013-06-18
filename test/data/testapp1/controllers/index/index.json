@@ -46,7 +46,7 @@
         },
         "templates": {
           "news-box": {
-            "comment": "do we allow sub-templates?",
+            "_comment": "do we allow sub-templates? or use inclusion?",
             "source": "recent_news",
             "context": {
               "recent_news": {

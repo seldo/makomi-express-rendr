@@ -8,10 +8,7 @@
       "model": "user/single",
       "requires": ["session_data"],
       "bindings": {
-        "id": {
-          "type": "dataref",
-          "source": "session_data.user_id"
-        }
+        "id": "dataref:session_data.user_id"
       }
     }
   },
@@ -39,10 +36,7 @@
       "head>title": {
         "source": "user/profiletitle",
         "context": {
-          "name": {
-            "type": "dataref",
-            "source": "current_user.name"
-          }
+          "name": "dataref:current_user.name"
         }
       }
     }

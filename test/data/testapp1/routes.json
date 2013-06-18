@@ -14,5 +14,13 @@
   "/user/:id": {
     "controller": "users",
     "action": "show"
+  },
+  "/more-news": {
+    "controller": "news",
+    "action": "more"
+  },
+  "/more-news/page/:page": {
+    "controller": "news",
+    "action": "more"
   }
 }
