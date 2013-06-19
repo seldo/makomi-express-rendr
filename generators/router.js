@@ -1,0 +1,1 @@
+exports.generate = function(routingFile,outputDir,cb) {}

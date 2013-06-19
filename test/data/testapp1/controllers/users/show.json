@@ -8,7 +8,19 @@
       "model": "user/single",
       "requires": ["session_data"],
       "bindings": {
-        "id": "dataref:session_data.user_id"
+        "id": {
+          "type":"dataref",
+          "value": "session_data.user_id"
+        }
+      }
+    },
+    "selected_user": {
+      "model": "user/single",
+      "bindings": {
+        "id": {
+          "type":"param",
+          "name": "id"
+        }
       }
     }
   },
@@ -19,7 +31,7 @@
       "col1": {
         "source": "nav",
         "context": {
-          "page": "userinfo"
+          "page": "profile"
         }
       },
       "col2": {
@@ -27,7 +39,7 @@
         "context": {
           "user": {
             "type": "model",
-            "source": "current_user"
+            "source": "selected_user"
           }
         }
       }

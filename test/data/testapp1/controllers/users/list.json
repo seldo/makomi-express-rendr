@@ -16,8 +16,12 @@
     },
     "all_users": {
       "model": "user/list",
-      "bindings": {},
-      "todo": "pagination"
+      "bindings": {
+        "page": {
+          "type": "param",
+          "default": 1
+        }
+      }
     }
   },
   "layout": {
@@ -48,6 +52,10 @@
           "users": {
             "type": "model",
             "source": "all_users"
+          },
+          "page": {
+            "type": "param",
+            "name": "page"
           }
         }
       }

@@ -1,0 +1,1 @@
+exports.generate = function(viewDir,outputDir,cb) {}

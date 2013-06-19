@@ -11,6 +11,10 @@
     "controller": "users",
     "action": "list"
   },
+  "/user/profile": {
+    "controller": "users",
+    "action": "self"
+  },
   "/user/:id": {
     "controller": "users",
     "action": "show"
